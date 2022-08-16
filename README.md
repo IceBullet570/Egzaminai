@@ -1,2 +1,2 @@
 # Egzaminai
-Pirmoji egzamino uzduotis, looks easy.
+Pirmoji egzamino uzduotis
