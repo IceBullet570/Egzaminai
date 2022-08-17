@@ -45,13 +45,10 @@ nav {
     flex-direction: column;
     float: right;
     width: 40px;
-    /* height: auto; */
     /* background-color: blue; */
 }
 span {
     color: red;
-    /* width: auto; */
-    /* background-color: blue; */
 }
 @media only screen and (min-width: 768px) {
     header {
@@ -64,7 +61,7 @@ span {
     gap: 30px;
     font-size: 30px;
     max-width: 100%;
-    padding-left: 600px;
+    padding-left: 300px;
     background-color: rgb(227, 37, 176);
     }
     .burger {
