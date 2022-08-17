@@ -1,2 +1,0 @@
-# Egzaminai
-Pirmoji egzamino uzduotis
