@@ -90,19 +90,20 @@ span {
 h1 {
     font-size: 50px;
     font-weight: bold;
-    background-color: aqua;
+    /* background-color: aqua; */
     padding-left: 45px;
 }
 h6 {
     font-size: 25px;
     padding-left: 45px;
     color: grey;
-    background-color: antiquewhite;
+    font-weight: normal;
+    /* background-color: antiquewhite; */
 }
 .wtf {
     background-color: yellow;
-    max-width: 100%;
-    height: auto;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
     border: 5px solid black;
 }
@@ -116,5 +117,15 @@ button {
     text-align: center;
     padding: 10px 20px;
     /* background-color: blueviolet; */
-    
+}
+.trecias {
+    /* background-color: blue; */
+    background-image: url("assets/background.svg");
+    padding-left: 45px;
+    padding-top: 100px;
+
+}
+.h1_plonas {
+    font-weight: normal;
+    padding-bottom: 30px;
 }
