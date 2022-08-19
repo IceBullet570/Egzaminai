@@ -79,7 +79,7 @@ span {
     font-size: large;
     width: 35%;
     padding-left: 45px;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 .antras {
     display: grid;
