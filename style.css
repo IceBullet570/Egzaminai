@@ -1,51 +1,79 @@
 html {
-    background-color: rgb(230, 228, 228);
-    border-radius: 10px;
+    background-color: rgb(251, 250, 250);
     padding: 3%;
+    padding-top: 3.5em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-* {
-    box-sizing: border-box;    
+    height: 100%;
+    max-width: 3840px;
+    min-width: 320px;
 }
 body {
     /* background-color: rgb(255, 221, 0); */
-    border-radius: 10px;
+    border-radius: 1em;
     text-align: auto;
+    width: 100%;
+    min-height: 100%;
 }
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+/* neturiu laiko aiskintis kas su situo negerai, bet iskraipo */
 header {
-    /* display: block; */
-    /* text-align: auto; */
-    /* align-content: space-between; */
-    padding: 50px;
-    padding-bottom: 90px;
-    /* background-color: aqua; */
-    border-radius: 10px;
-    max-width: 768px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1em;
+    flex-wrap: nowrap;
 }
 .nftlanding {
-    display: flex;
-    width: 25%;
-    float: left;
-    /* background-color: blueviolet; */
+    margin-left: 45px;
+    margin-right: 2em;
+    flex-basis: 100%;
 }
 .burger {
-    width: 100%;
+    width: 35px;
     height: 5px;
-    /* float: right; */
     background-color: grey;
     margin: 3px 0;
     font-size: 0px;
     border-radius: 10px;
+    margin-right: 2rem;
+    flex-basis: 100%;
+
 }
 nav {
     display: flex;
     flex-direction: column;
-    float: right;
-    width: 40px;
-    /* background-color: blue; */
+
 }
 span {
-    color: red;
+    color: rgb(227, 37, 176);
+}
+@media only screen and (min-width: 320px) {
+    header {
+    max-width: 100%;
+    }
+    nav {
+    display: flex;
+    margin-right: 1rem;
+    }
+    .burger {
+        display: flex;
+        flex-direction: row;
+        height: 0;
+        margin: 0;
+        width: auto;
+        font-size: 1em;
+        background-color: none;
+    }
+    span {
+        width: max-content;
+    }
+    .trecias {
+        display: flex;
+        flex-wrap: wrap;
+        }
 }
 @media only screen and (min-width: 768px) {
     header {
@@ -54,99 +82,204 @@ span {
     nav {
     display: flex;
     flex-direction: row;
-    float: none;
-    gap: 30px;
-    font-size: 30px;
+    width: 100%;
+    font-size: 1.5em;
+    /* background-color: rgb(227, 37, 37); */
+    }
+}
+@media only screen and (min-width: 1920px) {
+    header {
     max-width: 100%;
-    padding-left: 300px;
-    background-color: rgb(227, 37, 176);
     }
-    .burger {
-        display: flex;
-        flex-direction: row;
-        height: 0;
-        margin: 0;
-        width: auto;
-        font-size: 20px;
+    nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 2em;
+    /* background-color: rgb(227, 183, 37); */
     }
-    span {
-        width: max-content;
+}
+@media only screen and (min-width: 3840px) {
+    header {
+    max-width: 100%;
+    }
+    nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 3em;
+    /* background-color: rgb(37, 37, 227); */
     }
 }
 .launching {
-    color: red;
+    color: rgb(227, 37, 176);
     font-weight: bold;
-    font-size: 35px;
-    width: 100%;
-    padding-left: 45px;
-    background-color: aquamarine;
-    float: left;
+    font-size: 1em;
+    margin-left: 45px;
+    padding-top: 12em;
+    /* background-color: aquamarine; */
     
 }
-.antras {
-    display: inline-block;
-    grid-area: auto;
-    grid-template-columns: auto;
-    grid-auto-flow: column;
-    /* grid-template-columns: auto; */
-    background-color: bisque;
-    padding-top: 100px;
+.pirmas {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    /* background-color: bisque; */
+    margin-top: 3em;
+}
+.kaire {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.desne {
+    display: inline-flex;
+    justify-content: center;
+    width: 50%;
+
 }
 .h1 {
-    display: inline-block;
-    font-size: 50px;
+    font-size: 6em;
     font-weight: bold;
-    background-color: aqua;
-    padding-left: 45px;
-    width: 100%;
-    /* float: left; */
+    /* background-color: aqua; */
+    margin-left: 45px;
+    margin-top: 0.3em;
+
 }
 .h6 {
-    font-size: 25px;
-    padding-left: 45px;
+    font-size: 1.5em;
+    margin-left: 45px;
+    margin-top: 2em;
     color: grey;
     font-weight: normal;
-    background-color: antiquewhite;
-    float: left;
-    width: 100%;
+    /* background-color: rgb(249, 156, 34); */
+
 }
 .wtf {
-    display: inline-grid;
-    
-    background-color: yellow;
-    width: 500px;
-    /* padding-right: 500px; */
+    display: flex;
+    /* background-color: yellow; */
+    width: auto;
     shape-outside: circle();
-    border-radius: 50%;
-    /* float: right; */
+    border-radius: 100%;
     
 }
-.button {
+/* .button {
     padding-top: 35px;
     padding-left: 45px;
-}
-button {
-    font-weight: bold;
+} */
+    /* button {
+    /* font-weight: bold;
     padding-left: 45px;
     border-radius: 30px;
     border: 3px;
     border-style: solid;
     border-image: linear-gradient(to left, grey 0%, yellow 33%, yellow 33%, red 33%, red 66%, teal 66%, orange 100%) 5;
     text-align: center;
-    padding: 10px 20px;
+    padding: 10px 20px; */
     /* background-color: blueviolet; */
-}
-.trecias {
-    /* background-color: blue; */
+    /* } */
+button {
+    --grad: linear-gradient(to right bottom, var(--slist));
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: .5em;
+    /* margin: 1em auto; */
+    border: solid .25em transparent;
+    padding: 1em 2em;
+    border-radius: 9em;
+    background: var(--grad) border-box, linear-gradient(white 0 0), var(--grad) border-box;
+    -webkit-background-clip: text, padding-box, border-box;
+    background-clip: text, padding-box, border-box;
+    -webkit-text-fill-color: transparent; color: black;
+    font: 500 1em/ 1.25 ubuntu, sans-serif;
+    margin-left: 45px;
+    margin-bottom: 100px;
+    margin-top: 2em;
+    /* Vogta eilute, pats neismasciau teisingai, mano sprendimas auksciau iskomentuotas, bet liko kampai 90 laipsniu :( */
+    /* Pridejau vos vos zalios spalvos, taciau neradau kaip modifikuoti sita, kad tekstas butu juodas mygtuke ir nebeturiu laiko padaryt, kad desktop versijoj butu tokio pat dydzio kaip mobile */
+} 
+    
+.antras {
     background-image: url("assets/background.svg");
-    padding-left: 45px;
-    padding-top: 100px;
-
+    padding-top: 3em;
+    padding-bottom: 3em;
+    border-radius: 10px;
+    margin-left: 45px;
 }
 .h1_plonas {
     font-weight: normal;
-    padding-bottom: 30px;
+    margin-left: 45px;
+    padding-top: 2em;
 }
-.kaire {
-    display: grid;
+.h6_black {
+    color: black;
+    margin-left: 45px;
+}
+.opensea {
+    text-decoration: underline;
+}
+.trecias {
+    display: flex;
+    flex-direction: row;
+    margin-left: 45px;
+    gap: 5em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+.ikonos {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+.ketvirtas {
+    display: flex;
+    flex-direction: row;
+    margin-left: 45px;
+    gap: 1em;
+    background-color: aqua;
+}
+.squidgames {
+    display: flex;
+    flex-direction: row;
+}
+.h1_ketvirtas {
+    font-weight: normal;
+    margin-left: 20px;
+    padding-top: 2em;
+}
+.h6_ketvirtas {
+    font-size: 1.5em;
+    margin-left: 45px;
+    margin-top: 2em;
+    color: grey;
+    font-weight: normal;
+
+}
+.penktas {
+    font-size: 1.5em;
+    margin-left: 45px;
+    margin-top: 2em;
+    color: grey;
+    font-weight: normal;
+
+}
+.h1_penktas {
+    font-size: 70px;
+    font-weight: bolder;
+    color: black;
+    margin-left: 45px;
+    margin-top: .5em;
+}
+.sestas {
+    display: flex;
+    flex-direction: column;
+    margin-left: 45px;
+    
+
+}
+footer {
+    color: grey;
+    margin-top: 5em;
+    padding-bottom: 4em;
+
 }
