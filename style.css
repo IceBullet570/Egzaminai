@@ -18,7 +18,7 @@ header {
     /* align-content: space-between; */
     padding: 50px;
     padding-bottom: 90px;
-    background-color: aqua;
+    /* background-color: aqua; */
     border-radius: 10px;
     max-width: 768px;
 }
@@ -76,36 +76,54 @@ span {
 .launching {
     color: red;
     font-weight: bold;
-    font-size: large;
-    width: 35%;
+    font-size: 35px;
+    width: 100%;
     padding-left: 45px;
-    /* background-color: aquamarine; */
+    background-color: aquamarine;
+    float: left;
+    
 }
 .antras {
-    display: grid;
-    grid-auto-flow: column;
+    display: inline-block;
+    grid-area: auto;
     grid-template-columns: auto;
+    grid-auto-flow: column;
+    /* grid-template-columns: auto; */
     background-color: bisque;
+    padding-top: 100px;
 }
-h1 {
+.h1 {
+    display: inline-block;
     font-size: 50px;
     font-weight: bold;
-    /* background-color: aqua; */
+    background-color: aqua;
     padding-left: 45px;
+    width: 100%;
+    /* float: left; */
 }
-h6 {
+.h6 {
     font-size: 25px;
     padding-left: 45px;
     color: grey;
     font-weight: normal;
-    /* background-color: antiquewhite; */
+    background-color: antiquewhite;
+    float: left;
+    width: 100%;
 }
 .wtf {
+    display: inline-grid;
+    
     background-color: yellow;
     width: 500px;
-    height: 500px;
-    object-fit: cover;
-    border: 5px solid black;
+    /* padding-right: 500px; */
+    shape-outside: circle();
+    border-radius: 50%;
+    /* float: right; */
+    
+}
+.button {
+    padding-top: 35px;
+    padding-left: 45px;
 }
 button {
     font-weight: bold;
@@ -128,4 +146,7 @@ button {
 .h1_plonas {
     font-weight: normal;
     padding-bottom: 30px;
+}
+.kaire {
+    display: grid;
 }
