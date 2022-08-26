@@ -231,9 +231,12 @@ button {
     flex-direction: row;
     gap: 2em;
 }
+
+
+
 .ketvirtas {
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
     margin-left: 45px;
     gap: 1em;
     background-color: aqua;
@@ -241,16 +244,27 @@ button {
 .squidgames {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(243, 60, 60);
 }
+/* .squid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+} */
+
 .h1_ketvirtas {
     font-weight: normal;
-    margin-left: 20px;
+    margin-left: 45px;
     padding-top: 2em;
 }
 .h6_ketvirtas {
     font-size: 1.5em;
     margin-left: 45px;
     margin-top: 2em;
+    margin-bottom: 2em;
     color: grey;
     font-weight: normal;
 
