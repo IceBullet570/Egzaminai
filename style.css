@@ -239,22 +239,84 @@ button {
     flex-direction: row; */
     margin-left: 45px;
     gap: 1em;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 .squidgames {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: rgb(243, 60, 60);
+    /* background-color: rgb(243, 60, 60); */
 }
-/* .squid {
-    display: flex;
-    flex-direction: row;
+.squid {
+    display: grid;
+    grid-template-rows: [first] 280px [second] 200px;
+    grid-template-columns: [first] 140px [second] 150px;
     justify-content: center;
+    border: 1em;
+    border-color: black;
+    border-width: 1em;
+    border-radius: 1em;
+    background-color: rgb(209, 212, 212);
 
-} */
-
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.pirma {
+    display: flex;
+    flex-direction: column;
+    color: brown;
+    font-size: 0.8em;
+    text-align: center;   
+}
+.antra {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+    text-align: center; 
+}
+.nft {
+    padding-top: 1em;
+    font-size: 1.3em;
+    color: black;
+    text-align: center;
+    padding-bottom: 1em;
+    padding-left: 1.3em;
+}
+.number {
+    text-align: center;
+    color: grey;
+    padding-left: 3em;
+}
+.top_bid {
+    color: grey;
+    font-size: 0.8em;
+    text-align: center;
+}
+.kaina {
+    padding-top: 1em;
+    font-size: 1.3em;
+    color: black;
+    text-align: center;
+    padding-bottom: 1em;
+    padding-left: 1.3em;
+}
+.one_day_left {
+    text-align: center;
+    color: grey;
+    padding-left: 3em;
+}
 .h1_ketvirtas {
     font-weight: normal;
     margin-left: 45px;
@@ -267,7 +329,6 @@ button {
     margin-bottom: 2em;
     color: grey;
     font-weight: normal;
-
 }
 .penktas {
     font-size: 1.5em;
