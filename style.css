@@ -8,30 +8,22 @@ html {
     min-width: 320px;
 }
 body {
-    /* background-color: rgb(255, 221, 0); */
     border-radius: 1em;
     text-align: auto;
     width: 100%;
     min-height: 100%;
 }
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-/* neturiu laiko aiskintis kas su situo negerai, bet iskraipo */
 header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto;
     border-radius: 1em;
-    flex-wrap: nowrap;
 }
 .nftlanding {
     margin-left: 45px;
-    margin-right: 2em;
-    flex-basis: 100%;
+    width: 100%;
 }
 .burger {
+    display: flex;
     width: 35px;
     height: 5px;
     background-color: grey;
@@ -39,13 +31,12 @@ header {
     font-size: 0px;
     border-radius: 10px;
     margin-right: 2rem;
-    flex-basis: 100%;
-
 }
 nav {
     display: flex;
     flex-direction: column;
-
+    height: 3em;
+    margin-left: 2em;
 }
 span {
     color: rgb(227, 37, 176);
@@ -55,17 +46,20 @@ span {
     max-width: 100%;
     }
     nav {
-    display: flex;
+    display: grid;
+    gap: 1em;
     margin-right: 1rem;
+    margin-left: 1rem;
     }
     .burger {
         display: flex;
         flex-direction: row;
+        flex-wrap: nowrap;
         height: 0;
         margin: 0;
-        width: auto;
+        max-width: 100%;
         font-size: 1em;
-        background-color: none;
+        background-color: transparent;
     }
     span {
         width: max-content;
@@ -82,9 +76,23 @@ span {
     nav {
     display: flex;
     flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
-    font-size: 1.5em;
-    /* background-color: rgb(227, 37, 37); */
+    font-size: 1,5em;
+    }
+    .burger {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: end;
+        height: 0;
+        margin: 1em;
+        max-width: 100%;
+        width: auto;
+        text-align: right;
+        font-size: 1em;
+        background-color: transparent;
     }
 }
 @media only screen and (min-width: 1920px) {
@@ -96,7 +104,6 @@ span {
     flex-direction: row;
     width: 100%;
     font-size: 2em;
-    /* background-color: rgb(227, 183, 37); */
     }
 }
 @media only screen and (min-width: 3840px) {
@@ -108,7 +115,6 @@ span {
     flex-direction: row;
     width: 100%;
     font-size: 3em;
-    /* background-color: rgb(37, 37, 227); */
     }
 }
 .launching {
@@ -116,16 +122,11 @@ span {
     font-weight: bold;
     font-size: 1em;
     margin-left: 45px;
-    padding-top: 12em;
-    /* background-color: aquamarine; */
-    
+    padding-top: 5em;
 }
 .pirmas {
     display: flex;
     flex-direction: row;
-    justify-content: baseline;
-    /* background-color: bisque; */
-    margin-top: 3em;
 }
 .kaire {
     display: flex;
@@ -133,18 +134,15 @@ span {
     width: 50%;
 }
 .desne {
-    display: inline-flex;
+    display: inline-block;
     justify-content: center;
     width: 50%;
-
 }
 .h1 {
-    font-size: 6em;
+    font-size: 5em;
     font-weight: bold;
-    /* background-color: aqua; */
     margin-left: 45px;
-    margin-top: 0.3em;
-
+    margin-top: 0.5em;
 }
 .h6 {
     font-size: 1.5em;
@@ -152,38 +150,19 @@ span {
     margin-top: 2em;
     color: grey;
     font-weight: normal;
-    /* background-color: rgb(249, 156, 34); */
-
 }
 .wtf {
     display: flex;
-    /* background-color: yellow; */
     width: auto;
     shape-outside: circle();
     border-radius: 100%;
-    
+    margin-top: 7em;
 }
-/* .button {
-    padding-top: 35px;
-    padding-left: 45px;
-} */
-    /* button {
-    /* font-weight: bold;
-    padding-left: 45px;
-    border-radius: 30px;
-    border: 3px;
-    border-style: solid;
-    border-image: linear-gradient(to left, grey 0%, yellow 33%, yellow 33%, red 33%, red 66%, teal 66%, orange 100%) 5;
-    text-align: center;
-    padding: 10px 20px; */
-    /* background-color: blueviolet; */
-    /* } */
 button {
     --grad: linear-gradient(to right bottom, var(--slist));
     display: grid;
     grid-auto-flow: column;
     grid-gap: .5em;
-    /* margin: 1em auto; */
     border: solid .25em transparent;
     padding: 1em 2em;
     border-radius: 9em;
@@ -195,10 +174,14 @@ button {
     margin-left: 45px;
     margin-bottom: 100px;
     margin-top: 2em;
-    /* Vogta eilute, pats neismasciau teisingai, mano sprendimas auksciau iskomentuotas, bet liko kampai 90 laipsniu :( */
+    /* Vogta eilute, pats neismasciau teisingai :( */
     /* Pridejau vos vos zalios spalvos, taciau neradau kaip modifikuoti sita, kad tekstas butu juodas mygtuke ir nebeturiu laiko padaryt, kad desktop versijoj butu tokio pat dydzio kaip mobile */
 } 
-    
+@media only screen and (min-width: 768px) {
+    button {
+    max-width: 75%;
+    }
+}
 .antras {
     background-image: url("assets/background.svg");
     padding-top: 3em;
@@ -217,6 +200,7 @@ button {
 }
 .opensea {
     text-decoration: underline;
+    color: black;
 }
 .trecias {
     display: flex;
@@ -231,26 +215,19 @@ button {
     flex-direction: row;
     gap: 2em;
 }
-
-
-
 .ketvirtas {
-    /* display: flex;
-    flex-direction: row; */
     margin-left: 45px;
     gap: 1em;
-    /* background-color: aqua; */
 }
 .squidgames {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* background-color: rgb(243, 60, 60); */
 }
 .squid {
     display: grid;
-    grid-template-rows: [first] 280px [second] 200px;
+    grid-template-rows: [first] 220px [second] 200px;
     grid-template-columns: [first] 140px [second] 150px;
     justify-content: center;
     border: 1em;
@@ -258,33 +235,43 @@ button {
     border-width: 1em;
     border-radius: 1em;
     background-color: rgb(209, 212, 212);
-
 }
 .left {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 1em;
 }
 .right {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 1em;
 }
 .pirma {
     display: flex;
     flex-direction: column;
     color: brown;
     font-size: 0.8em;
-    text-align: center;   
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 .antra {
     display: flex;
     flex-direction: column;
     font-size: 0.8em;
-    text-align: center; 
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 .nft {
     padding-top: 1em;
@@ -292,17 +279,21 @@ button {
     color: black;
     text-align: center;
     padding-bottom: 1em;
-    padding-left: 1.3em;
+    margin-left: auto;
+    margin-right: auto;
 }
 .number {
     text-align: center;
     color: grey;
-    padding-left: 3em;
+    margin-left: auto;
+    margin-right: auto;
 }
 .top_bid {
     color: grey;
     font-size: 0.8em;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 .kaina {
     padding-top: 1em;
@@ -310,12 +301,14 @@ button {
     color: black;
     text-align: center;
     padding-bottom: 1em;
-    padding-left: 1.3em;
+    margin-left: auto;
+    margin-right: auto;
 }
 .one_day_left {
     text-align: center;
     color: grey;
-    padding-left: 3em;
+    margin-left: auto;
+    margin-right: auto;
 }
 .h1_ketvirtas {
     font-weight: normal;
@@ -330,12 +323,31 @@ button {
     color: grey;
     font-weight: normal;
 }
+.linija {
+    height: 0.2em;
+    background-color: darkgrey;
+    border-radius: 1em;
+    margin-top: 10em;
+}
 .penktas {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
     font-size: 1.5em;
     margin-left: 45px;
     margin-top: 2em;
     color: grey;
     font-weight: normal;
+
+}
+.penktasright {
+    display: block;
+    width: 50%;
+
+}
+.penktasleft {
+    display: block;
+    width: 50%;
 
 }
 .h1_penktas {
